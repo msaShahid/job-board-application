@@ -71,7 +71,7 @@ Access the API at `http://localhost:8000`.
 - **Register**
   - **Endpoint:** `POST /api/v1/auth/register`
   - **Description:** Register a new user.
-  - **Parameters:** `name`, `email`, `password`, `password_confirmation`
+  - **Parameters:** `name`, `email`, `password`
   - **Response:** User details and authentication token.
 
 - **Login**
@@ -93,8 +93,9 @@ Access the API at `http://localhost:8000`.
 ### Work
 
 - **Search Work**
-  - **Endpoint:** `GET /api/v1/work/search`
+  - **Endpoint:** `GET /api/v1/work/search?title=Software&location=kolkata`
   - **Description:** Search for work opportunities.
+   - **Parameters:** `title`, `location`
   - **Response:** List of work opportunities based on search criteria.
 
 - **List Work**
@@ -131,7 +132,7 @@ Access the API at `http://localhost:8000`.
 - **Apply for Work**
   - **Endpoint:** `POST /api/v1/work/{workId}/apply`
   - **Description:** Apply for a specific work opportunity.
-  - **Parameters:** `workId`, `resume`, `cover_letter`, etc.
+  - **Parameters:** `workId`.
   - **Response:** Application submission confirmation.
 
 - **Get Applications**
